@@ -7,7 +7,14 @@ export async function getMatches(req: Request, res: Response) {
   return res.status(200).json(matches);
 }
 
-export async function saveMatches(req: Request, res: Response) {
-  const matches = {};
-  return res.status(200).json(matches);
+export async function saveMatch(req: Request, res: Response) {
+  const credentials = req.body;
+  const newMatch = await matchService.saveMatch(credentials);
+  return res.status(201).json(newMatch);
+}
+
+export async function finishMatch(req: Request, res: Response) {
+  const { id } = req.params;
+  await matchService.finishMatch(Number(id));
+  return res.status(200).json({ message: 'Finished' });
 }

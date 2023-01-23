@@ -1,5 +1,6 @@
 import Team from '../database/models/TeamModel';
 import MatchModel from '../database/models/MatchModel';
+import { IMatchCredentials } from '../interfaces/imatch';
 
 export const getMatches = async (inProgress: string | undefined) => {
   const matches = await MatchModel.findAll({
@@ -21,7 +22,11 @@ export const getMatches = async (inProgress: string | undefined) => {
   return filteredMatches;
 };
 
-export const saveMatch = async (id: number) => {
-  const team = await MatchModel.findByPk(id);
-  return team;
+export const saveMatch = async (match: IMatchCredentials) => {
+  const newMatch = await MatchModel.create({ ...match, inProgress: true });
+  return newMatch;
+};
+
+export const finishMatch = async (id: number) => {
+  await MatchModel.update({ inProgress: false }, { where: { id } });
 };

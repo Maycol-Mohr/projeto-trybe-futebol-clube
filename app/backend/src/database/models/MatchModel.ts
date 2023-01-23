@@ -6,7 +6,7 @@ class Match extends Model {
   declare homeTeamId: number;
   declare homeTeamGoals: number;
   declare awayTeamId: number;
-  declare awayTeamsGoals: number;
+  declare awayTeamGoals: number;
   declare inProgress: boolean;
 }
 
@@ -15,7 +15,7 @@ Match.init({
   homeTeamId: DataTypes.INTEGER,
   homeTeamGoals: DataTypes.INTEGER,
   awayTeamId: DataTypes.INTEGER,
-  awayTeamsGoals: DataTypes.INTEGER,
+  awayTeamGoals: DataTypes.INTEGER,
   inProgress: DataTypes.BOOLEAN,
 }, {
   underscored: true,

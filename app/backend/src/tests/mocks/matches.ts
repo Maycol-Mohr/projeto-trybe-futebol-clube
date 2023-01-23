@@ -142,4 +142,13 @@ const matches =
               },
         ];
 
-export default matches;
+     
+
+const matchMock = {
+  "homeTeamId": 4,
+  "awayTeamId": 5,
+  "homeTeamGoals": 4,
+  "awayTeamGoals": 1,
+};
+
+export default { matches, matchMock };

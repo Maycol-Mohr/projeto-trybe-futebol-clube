@@ -18,3 +18,10 @@ export async function finishMatch(req: Request, res: Response) {
   await matchService.finishMatch(Number(id));
   return res.status(200).json({ message: 'Finished' });
 }
+
+export async function updateMatch(req: Request, res: Response) {
+  const { id } = req.params;
+  const match = req.body;
+  await matchService.updateMatch(Number(id), match);
+  return res.status(200).json({ message: 'Updated' });
+}

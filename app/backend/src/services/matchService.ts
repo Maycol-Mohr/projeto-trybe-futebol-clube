@@ -30,3 +30,7 @@ export const saveMatch = async (match: IMatchCredentials) => {
 export const finishMatch = async (id: number) => {
   await MatchModel.update({ inProgress: false }, { where: { id } });
 };
+
+export const updateMatch = async (id: number, match: IMatchCredentials) => {
+  await MatchModel.update({ ...match }, { where: { id } });
+};

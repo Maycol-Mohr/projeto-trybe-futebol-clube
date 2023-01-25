@@ -1,6 +1,6 @@
 import * as jwt from 'jsonwebtoken';
 // import IToken from '../interfaces/itoken';
-import { UserBody } from '../interfaces/iuser';
+import { UserBody } from '../interfaces/IUser';
 import jwtConfig from '../middlewares/jwtConfig';
 
 require('dotenv/config');

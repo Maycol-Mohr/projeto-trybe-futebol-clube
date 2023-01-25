@@ -1,5 +1,5 @@
 import { compareSync } from 'bcryptjs';
-import { UserCredentials, User } from '../interfaces/iuser';
+import { UserCredentials, User } from '../interfaces/IUser';
 import createToken from '../auth/createToken';
 import UserModel from '../database/models/UserModel';
 

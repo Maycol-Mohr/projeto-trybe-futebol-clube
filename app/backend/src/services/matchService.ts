@@ -1,6 +1,6 @@
 import Team from '../database/models/TeamModel';
 import MatchModel from '../database/models/MatchModel';
-import { IMatchCredentials } from '../interfaces/imatch';
+import { IMatchCredentials } from '../interfaces/IMatch';
 
 export const getMatches = async (inProgress: string | undefined) => {
   const matches = await MatchModel.findAll({

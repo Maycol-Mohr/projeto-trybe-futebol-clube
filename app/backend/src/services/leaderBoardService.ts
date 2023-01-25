@@ -7,14 +7,14 @@ const getHomeClassification = async () => {
   return teams;
 };
 
-// const getAwayClassification = async () => {
-//   const teams = await MatchRepository.getAwayClassification();
-//   return teams;
-// };
+const getAwayClassification = async () => {
+  const teams = await MatchRepository.getAwayScore();
+  return teams;
+};
 
 // const getLeaderboardClassification = async () => {
 //   const teams = await MatchRepository.getLeaderboardClassification();
 //   return teams;
 // };
 
-export default { getHomeClassification };
+export default { getHomeClassification, getAwayClassification };

@@ -1,4 +1,6 @@
-# :construction: README customizado em construção ! :construction:
+# Projeto Trybe Futebol Clube
+
+Este projeto desenvolvido com uma API permite cadastrar partidas de futebol e consultar a classificação dos clubes baseado em critérios.
 <!-- Olá, Tryber!
 Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
 
